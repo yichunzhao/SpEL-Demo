@@ -22,5 +22,9 @@ public class SpELEvaluation {
 
         String capitalMsg = (String) parser.parseExpression("'myMessage'.toUpperCase").getValue();
         System.out.println("Msg in capitals : " + capitalMsg);
+
+        //construct a new string from a literal expression
+        String newStr = parser.parseExpression("new String('this is a new String')").getValue(String.class);
+        System.out.println("New String from a Literal : " + newStr);
     }
 }
