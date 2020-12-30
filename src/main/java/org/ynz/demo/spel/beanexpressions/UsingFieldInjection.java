@@ -12,8 +12,12 @@ public class UsingFieldInjection {
         String injectedValue = ctx.getBean("myFeature", String.class);
         String userRegion = ctx.getBean("userRegion", String.class);
 
+        //isProduction
+        Boolean isProduction = ctx.getBean("isProduction", Boolean.class);
+
         System.out.println("injected value: " + injectedValue);
         System.out.println("user region: " + userRegion);
+        System.out.println("Is production? " + isProduction);
     }
 
 }

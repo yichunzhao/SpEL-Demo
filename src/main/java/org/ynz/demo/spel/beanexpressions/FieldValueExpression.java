@@ -23,6 +23,9 @@ public class FieldValueExpression {
     @Value("#{environment['user.region']}")
     private String userRegion;
 
+    @Value("#{environment['app.profile']=='prod'}")
+    private Boolean isProduction;
+
     @Bean(name = "myFeature")
     public String getInjectedValue() {
         return injectedValue;
@@ -33,5 +36,9 @@ public class FieldValueExpression {
         return userRegion;
     }
 
+    @Bean(name = "isProduction")
+    public Boolean isProduction() {
+        return isProduction;
+    }
 
 }
