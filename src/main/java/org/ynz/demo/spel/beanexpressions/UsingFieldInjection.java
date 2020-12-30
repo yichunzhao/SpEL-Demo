@@ -2,10 +2,8 @@ package org.ynz.demo.spel.beanexpressions;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 
 
-@ComponentScan(basePackages = "org.ynz.demo.spel")
 public class UsingFieldInjection {
     public static void main(String[] args) {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(FieldValueExpression.class);
@@ -18,6 +16,10 @@ public class UsingFieldInjection {
         System.out.println("injected value: " + injectedValue);
         System.out.println("user region: " + userRegion);
         System.out.println("Is production? " + isProduction);
+
+        //injecting value on the constructor
+        MethodValueInjection mv = ctx.getBean(MethodValueInjection.class);
+        System.out.println("startDate: " + mv.getStartDate());
     }
 
 }

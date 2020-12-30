@@ -2,6 +2,7 @@ package org.ynz.demo.spel.beanexpressions;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
@@ -12,8 +13,9 @@ import org.springframework.context.annotation.PropertySource;
  * instances. In both cases, the syntax to define the expression is of the form #{ <expression string> }.
  */
 
-@PropertySource("classpath:application.properties")
+@ComponentScan
 @Configuration
+@PropertySource("classpath:application.properties")
 public class FieldValueExpression {
     //injecting a property from a property file
     @Value("${my.feature}")
