@@ -12,9 +12,39 @@ The SpEL classes and interfaces are located in the org.springframework.expressio
         </dependency>
 ````
 
-You can use SpEL expressions with XML-based or annotation-based configuration metadata for defining BeanDefinition instances. In both cases, the syntax to define the expression is of the form `#{ <expression string> }`.
+You can use SpEL expressions with XML-based or annotation-based configuration metadata for defining BeanDefinition instances. In both cases, the syntax to define the expression is of the form `#{ <expression string> }`, and meanwhile SpEL provides relational, equality, and logical operations. 
 
 ````
 @Value("#{environment['app.profile']=='prod'}")
     private Boolean isProduction;
 ````
+
+> All of the textual operators are case-insensitive.
+
+> lt (<)
+
+> gt (>)
+
+> le (<=)
+
+> ge (>=)
+
+> eq (==)
+
+> ne (!=)
+
+> div (/)
+
+> mod (%)
+
+> not (!).
+
+> Logical Operators
+> SpEL supports the following logical operators:
+
+> and (&&)
+
+> or (||)
+
+> not (!)
+
