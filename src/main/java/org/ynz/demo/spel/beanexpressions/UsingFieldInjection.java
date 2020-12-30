@@ -3,6 +3,9 @@ package org.ynz.demo.spel.beanexpressions;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.Arrays;
+import java.util.List;
+
 
 public class UsingFieldInjection {
     public static void main(String[] args) {
@@ -20,6 +23,12 @@ public class UsingFieldInjection {
         //injecting value on the constructor
         MethodValueInjection mv = ctx.getBean(MethodValueInjection.class);
         System.out.println("startDate: " + mv.getStartDate());
+
+        String[] myListValues = ctx.getBean("myListValues", String[].class);
+        System.out.println("my list values: " + Arrays.toString(myListValues));
+
+        List<String> myListValues1 = ctx.getBean("myListValues1", List.class);
+        System.out.println("my list values_1: " + myListValues1.toString());
     }
 
 }
