@@ -20,31 +20,19 @@ You can use SpEL expressions with XML-based or annotation-based configuration me
 ````
 
 > All of the textual operators are case-insensitive.
-
 > lt (<)
-
 > gt (>)
-
 > le (<=)
-
 > ge (>=)
-
 > eq (==)
-
 > ne (!=)
-
 > div (/)
-
 > mod (%)
-
 > not (!).
 
 > Logical Operators
 > SpEL supports the following logical operators:
-
 > and (&&)
-
 > or (||)
-
 > not (!)
 
