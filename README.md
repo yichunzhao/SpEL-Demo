@@ -11,3 +11,5 @@ The SpEL classes and interfaces are located in the org.springframework.expressio
             <version>5.3.1</version>
         </dependency>
 ````
+
+You can use SpEL expressions with XML-based or annotation-based configuration metadata for defining BeanDefinition instances. In both cases, the syntax to define the expression is of the form #{ <expression string> }.
