@@ -4,7 +4,9 @@ import org.springframework.expression.ExpressionParser;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 
 /**
- * evaluating an String that contains a String literal denoted by the surrounding single quotation marks.
+ * SpEL is a string of expression, in which a literal String is demoted by the surrounding single quotations marks.
+ * The expression may denote creating a new instance by invoking a constructor via a literal 'new', invoking an
+ * instance's method via its literal method names etc.
  */
 public class SpELEvaluation {
     private static ExpressionParser parser = new SpelExpressionParser();
